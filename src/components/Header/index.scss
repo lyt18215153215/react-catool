@@ -1,0 +1,30 @@
+@import '../../assets/css/function.scss';
+
+.header-bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    height: px2rem(100px);
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    color:#fff;
+    line-height:px2rem(100px);
+    text-align:center;
+    font-size:px2rem(32px);
+    justify-content: space-between;
+    background: #4abdfb;
+    .header-btn{
+        display: flex;
+        width: px2rem(120px);
+        height:px2rem(100px);
+        align-items:center;
+        justify-content: center;
+    }
+}
+.header-icon{
+    width: px2rem(50px);
+    height: px2rem(50px);
+}

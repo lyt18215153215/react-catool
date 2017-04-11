@@ -1,0 +1,86 @@
+@import '/assets/css/function';
+
+html {
+    height: 100%;
+}
+
+body {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.icon {
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+#root {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    max-width: px2rem(1080px);
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+
+    .header-bar.show {
+        & ~ .content,
+        & ~ .loading {
+            top: px2rem(100px);
+        }
+    }
+
+    .tabar-bar {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 99;
+        height: px2rem(120px);
+        width: 100%;
+
+        &.hide {
+            display: none;
+        }
+
+        & ~ .content,
+        & ~ .loading {
+            bottom: px2rem(120px);
+        }
+
+        &.hide ~ .content,
+        &.hide ~ .loading {
+            bottom: 0;
+        }
+    }
+
+    .content {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .slide-left-enter-active {
+        animation: slideLeft 0.3s;
+    }
+}
+@keyframes slideLeft {
+    from {
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}

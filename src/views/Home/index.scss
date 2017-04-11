@@ -1,0 +1,21 @@
+@import '../../assets/css/function.scss';
+
+.header-bar{
+    display: flex;
+    color:#fff;
+    line-height:px2rem(100px);
+    text-align:center;
+    font-size:px2rem(32px);
+    justify-content: space-between;
+    .header-btn{
+        display: flex;
+        width: px2rem(120px);
+        height:px2rem(100px);
+        align-items:center;
+        justify-content: center;
+    }
+}
+.header-icon{
+    width: px2rem(50px);
+    height: px2rem(50px);
+}
